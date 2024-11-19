@@ -1,0 +1,9 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Verilog/UART/UART.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Verilog/UART/UART.srcs/sim_1/new/tb_my_uart_TX.v,1731409336,verilog,,,,tb_my_uart_TX,,,,,,,,
+C:/Verilog/UART/UART.srcs/sources_1/new/TX.v,1731408918,verilog,,C:/Verilog/UART/UART.srcs/sources_1/new/bit_clk_gen.v,,my_uart_TX,,,,,,,,
+C:/Verilog/UART/UART.srcs/sources_1/new/bit_clk_gen.v,1731409786,verilog,,C:/Verilog/UART/UART.srcs/sources_1/new/parity_gen.v,,bit_clk_gen,,,,,,,,
+C:/Verilog/UART/UART.srcs/sources_1/new/parity_gen.v,1731408967,verilog,,C:/Verilog/UART/UART.srcs/sim_1/new/tb_my_uart_TX.v,,parity_gen,,,,,,,,
