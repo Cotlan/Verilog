@@ -20,7 +20,7 @@ module uart_baud_gen(
         end
         else
         begin
-            if(Count==CLK_MAX/16-1)
+            if(Count==((CLK_MAX/16)-1))
             begin
                 Count<=0;
                 baud_x16_en<=1;

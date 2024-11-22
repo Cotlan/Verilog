@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module tick_gen(
 	input RST,  // 100ms tick
     input CLK,

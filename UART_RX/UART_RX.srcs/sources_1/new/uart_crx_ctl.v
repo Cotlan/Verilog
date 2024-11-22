@@ -5,17 +5,25 @@ module uart_crx_ctl(
     input CLK,
     input RXD,
     input baud_x16_en,
-    output reg RX_RDY,
-    output reg [7:0] RX_DATA,
-    output reg parity_error
+    output RX_RDY,
+    output reg [7:0] RX_DATA
     );
     
     localparam [1:0] IDLE = 2'b00,START=2'b01,RX=2'b11,STOP=2'b10;
+    (* MARK_DEBUG="true" *)
     reg [1:0] state, next_state;
-    reg over_sample_cnt_done=0;
-    reg bit_cnt_done=0;
+   
+    (* MARK_DEBUG="true" *)
     reg [3:0] sample_cnt=0;
+    wire sample_done;
+    wire bit_stop_done,bit_cnt_done;
+    reg [9:0]temp=0;
+    reg [3:0] bit_cnt=0;
     
+    assign bit_stop_done=(bit_cnt==11)?1:0;
+    assign RX_RDY=(bit_cnt==11)?1:0;
+    assign bit_cnt_done=(bit_cnt==8)?1:0;
+    assign sample_done=(sample_cnt==4'd7)?1'b1:1'b0;
     
     always @(posedge CLK)
     begin
@@ -25,94 +33,41 @@ module uart_crx_ctl(
             state<=next_state;
     end
     
-    reg sample_cnt_done;
-    always @(posedge baud_x16_en)
+    always @(posedge CLK)
     begin
-       if(sample_cnt==4'd7)
-       begin
+        if(baud_x16_en)
             sample_cnt<=sample_cnt+1;
-            sample_cnt_done<=1'b0; 
-
-       end
-       else if(sample_cnt==4'd15)
-       begin
-            sample_cnt<=4'd0;
-            sample_cnt_done<=1'b1; 
-       end
-       else
-       begin
-            sample_cnt<=sample_cnt+1;
-            sample_cnt_done<=1'b0; 
-       end
+        else
+            sample_cnt<=sample_cnt;    
+    end   
+        
+    always @(posedge CLK)
+    begin
+    if(state==IDLE)
+        bit_cnt<=0;
+    else 
+        begin
+            if(baud_x16_en&&sample_done)
+            begin
+                bit_cnt<=bit_cnt+1;
+                temp[bit_cnt]<=RXD;
+            end
+            else bit_cnt <= bit_cnt;
+        end
     end
     
-    assign sample=(sample_cnt==4'd7)?RXD:0;
+    always @(posedge CLK )
+    begin
+        if(state==STOP )
+            RX_DATA<=temp[8:1];    
+    end
     
-    
-    reg [7:0] rx_shift=0;
-    reg [3:0] bit_cnt=0;
-    reg parity=0;
-    reg delay = 1;
-        always @(posedge baud_x16_en)
-        begin   
-                if(state==RX)
-                begin
-                    if(bit_cnt==4'd8)
-                    begin
-                        if(sample_cnt == 7)
-                            begin
-                                bit_cnt<=bit_cnt+1;
-                                RX_DATA <= rx_shift;
-                                parity <= RXD;
-                                RX_RDY <= 0;
-                            end
-                    end
-                    else if(bit_cnt==4'd9)
-                    begin
-                        
-                        bit_cnt_done<=1;
-                        RX_RDY <= 1;
-                        parity_error<=(^{parity,RX_DATA})?1'b1:1'b0;
-                        if(sample_cnt_done)
-                            bit_cnt<=0;
-                    end
-                    else
-                    begin
-                        if(sample_cnt == 7)
-                        begin
-                            begin
-                                if(delay) 
-                                    begin
-                                        bit_cnt <= 0;
-                                        delay <= 0;
-                                    end
-                                else
-                                    begin
-                                        bit_cnt<=bit_cnt+1;
-                                        
-                                        rx_shift[bit_cnt]<=sample;
-                                        bit_cnt_done <= 0;
-                                        RX_RDY <= 0;
-                                    end
-                            end
-                        end
-                     end
-                end
-                else
-                    begin
-                        RX_RDY<=0;
-                        bit_cnt <= 0;
-                        bit_cnt_done <= 0;
-                    end 
-  
-       end 
-
-    
-    always @(state, RXD,over_sample_cnt_done,bit_cnt_done)
+    always @(state, RXD,sample_done,bit_cnt_done,bit_stop_done)
     begin
         case(state)
             IDLE:
             begin
+            
                 if(!RXD)
                     next_state=START;
                 else 
@@ -120,21 +75,21 @@ module uart_crx_ctl(
             end
             START:
             begin
-                if(sample_cnt_done) 
+                if(sample_done) 
                     next_state=RX;
                 else
                     next_state=START;
             end
             RX:
             begin
-                if(RX_RDY)
+                if(bit_cnt_done)
                     next_state=STOP;
                 else
                     next_state=RX;
             end
             STOP:
             begin
-                if(sample_cnt_done && RXD)
+                if(bit_stop_done)
                     next_state=IDLE;
                 else
                     next_state=STOP;

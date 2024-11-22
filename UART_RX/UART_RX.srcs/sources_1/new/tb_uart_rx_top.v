@@ -25,16 +25,14 @@ module tb_uart_rx_top();
     reg RST,CLK,RXD;
     wire[6:0] AN;
     wire CA;
-    wire ERROR;
-    parameter CLK_PD=2.0;
+    parameter CLK_PD=8.0;
     
     uart_rx_top dut(
     .RST(RST),
     .CLK(CLK),
     .RXD(RXD),
     .AN(AN),
-    .CA(CA),
-    .ERROR(ERROR)
+    .CA(CA)
     );
     
     defparam dut.uut0.uut0.CLK_FREQ=4800;
@@ -69,7 +67,49 @@ initial begin
     RXD=1'b0;
     #(CLK_PD*48);
     RXD=1'b1;
-    #(CLK_PD*200);
+    #(CLK_PD*48*3);
+    //
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48);
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48);
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48);
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48*3);
+    //
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48);
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48);
+    RXD=1'b0;
+    #(CLK_PD*48);
+    RXD=1'b1;
+    #(CLK_PD*48);
     $finish;
 end
         

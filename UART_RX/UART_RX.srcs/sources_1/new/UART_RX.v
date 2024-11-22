@@ -6,8 +6,7 @@ module UART_RX(
     input CLK,
     input RXD,
     output RX_RDY,
-    output [7:0] RX_DATA,
-    output parity_error
+    output [7:0] RX_DATA
     );
     parameter BAUD_RATE=9600;
     parameter CLK_FREQ=125_000_000;
@@ -26,8 +25,7 @@ module UART_RX(
     .RXD(RXD),
     .baud_x16_en(baud_x16_en),
     .RX_RDY(RX_RDY),
-    .RX_DATA(RX_DATA),
-    .parity_error(parity_error)
+    .RX_DATA(RX_DATA)
     );
     
 endmodule

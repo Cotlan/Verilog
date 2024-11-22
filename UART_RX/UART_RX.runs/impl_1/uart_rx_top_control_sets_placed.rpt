@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Tue Nov 19 16:55:46 2024
+| Date         : Fri Nov 22 17:26:58 2024
 | Host         : COMSYS01 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file uart_rx_top_control_sets_placed.rpt
 | Design       : uart_rx_top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     9 |
-|    Minimum number of control sets                        |     9 |
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    39 |
+| Unused register locations in slices containing registers |    84 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,14 +39,14 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     9 |
-| >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     2 |
+| Total control sets |    16 |
+| >= 0 to < 4        |     9 |
+| >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     2 |
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     1 |
+| >= 14 to < 16      |     0 |
 | >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -58,30 +58,37 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              16 |            5 |
+| No           | No                    | No                     |               1 |            1 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              35 |           11 |
-| Yes          | No                    | No                     |              18 |            6 |
+| No           | Yes                   | No                     |              35 |           13 |
+| Yes          | No                    | No                     |              28 |           14 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               4 |            1 |
+| Yes          | Yes                   | No                     |               4 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------+--------------------------------+-------------------------------+------------------+----------------+--------------+
-|   Clock Signal  |          Enable Signal         |        Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------+--------------------------------+-------------------------------+------------------+----------------+--------------+
-|  uut1/dut0/tick |                                |                               |                1 |              1 |         1.00 |
-|  uut0/uut0/CLK  | uut0/uut1/parity_error_i_1_n_0 |                               |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG  |                                | RST_IBUF                      |                2 |              4 |         2.00 |
-|  uut0/uut0/CLK  | uut0/uut1/bit_cnt[3]_i_2_n_0   | uut0/uut1/bit_cnt             |                1 |              4 |         4.00 |
-|  CLK_IBUF_BUFG  | uut0/uut1/E[0]                 |                               |                3 |              8 |         2.67 |
-|  uut0/uut0/CLK  | uut0/uut1/parity_0             |                               |                2 |              9 |         4.50 |
-|  CLK_IBUF_BUFG  |                                | uut0/uut0/Count[0]_i_1_n_0    |                3 |             10 |         3.33 |
-|  uut0/uut0/CLK  |                                |                               |                4 |             15 |         3.75 |
-|  CLK_IBUF_BUFG  |                                | uut1/dut0/tick_cnt[0]_i_1_n_0 |                6 |             21 |         3.50 |
-+-----------------+--------------------------------+-------------------------------+------------------+----------------+--------------+
++-----------------+------------------------------+-------------------------------+------------------+----------------+--------------+
+|   Clock Signal  |         Enable Signal        |        Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+------------------------------+-------------------------------+------------------+----------------+--------------+
+|  uut1/dut0/tick |                              |                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/temp[4]_i_1_n_0    |                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/temp[8]_i_1_n_0    |                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/temp[5]_i_1_n_0    |                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/temp[3]_i_1_n_0    |                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/temp[6]_i_1_n_0    |                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/temp[2]_i_1_n_0    |                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/temp[7]_i_1_n_0    |                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/temp[1]_i_1_n_0    |                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG  |                              | RST_IBUF                      |                4 |              4 |         1.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/p_1_in_1           | uut0/uut1/bit_cnt[3]_i_1_n_0  |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG  | uut0/uut0/E[0]               |                               |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG  | uut0/uut1/RX_DATA[7]_i_1_n_0 |                               |                3 |              8 |         2.67 |
+|  CLK_IBUF_BUFG  | uut0/uut1/E[0]               |                               |                2 |              8 |         4.00 |
+|  CLK_IBUF_BUFG  |                              | uut0/uut0/Count[0]_i_1_n_0    |                3 |             10 |         3.33 |
+|  CLK_IBUF_BUFG  |                              | uut1/dut0/tick_cnt[0]_i_1_n_0 |                6 |             21 |         3.50 |
++-----------------+------------------------------+-------------------------------+------------------+----------------+--------------+
 
 
