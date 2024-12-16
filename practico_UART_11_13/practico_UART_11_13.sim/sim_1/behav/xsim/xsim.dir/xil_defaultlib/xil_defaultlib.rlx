@@ -1,0 +1,8 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Verilog/practico_UART_11_13/practico_UART_11_13.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Verilog/practico_UART_11_13/practico_UART_11_13.srcs/sim_1/new/tb_my_TX.v,1731492245,verilog,,,,tb_my_TX,,,,,,,,
+C:/Verilog/practico_UART_11_13/practico_UART_11_13.srcs/sources_1/new/BIT_CLK_gen.v,1731488455,verilog,,C:/Verilog/practico_UART_11_13/practico_UART_11_13.srcs/sources_1/new/my_TX.v,,BIT_CLK_gen,,,,,,,,
+C:/Verilog/practico_UART_11_13/practico_UART_11_13.srcs/sources_1/new/my_TX.v,1731491957,verilog,,C:/Verilog/practico_UART_11_13/practico_UART_11_13.srcs/sim_1/new/tb_my_TX.v,,my_TX,,,,,,,,

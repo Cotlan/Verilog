@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+Time=                   0 state=xxx next_state=000 cnt_1s=        x sec1= 0
+Time=                4000 state=000 next_state=000 cnt_1s=        x sec1= 0
+Time=               12000 state=000 next_state=000 cnt_1s=        0 sec1= 0
+Time=               80000 state=000 next_state=001 cnt_1s=        0 sec1= 0
+Time=               84000 state=001 next_state=010 cnt_1s=        0 sec1= 0
+Time=               92000 state=010 next_state=010 cnt_1s=        1 sec1= 0

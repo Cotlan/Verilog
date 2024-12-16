@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../Users/user/Documents/카카오톡 받은 파일/disp.v" \
+"../../../../practico_11_11_stopwatch.srcs/sources_1/new/stop_watch.v" \
+"../../../../practico_11_11_stopwatch.srcs/sources_1/new/stop_watch_top.v" \
+"../../../../practico_11_11_stopwatch.srcs/sources_1/new/tick_gen.v" \
+"../../../../practico_11_11_stopwatch.srcs/sim_1/new/stop_watch_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

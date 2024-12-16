@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../Users/user/Documents/카카오톡 받은 파일/my_serdes.v" \
+"../../../../../../Users/user/Documents/카카오톡 받은 파일/my_serdes_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

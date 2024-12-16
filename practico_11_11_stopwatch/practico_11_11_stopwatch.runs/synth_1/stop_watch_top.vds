@@ -1,0 +1,245 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Nov 11 14:53:24 2024
+# Process ID: 14892
+# Current directory: C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.runs/synth_1
+# Command line: vivado.exe -log stop_watch_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source stop_watch_top.tcl
+# Log file: C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.runs/synth_1/stop_watch_top.vds
+# Journal file: C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.runs/synth_1\vivado.jou
+# Running On: COMSYS01, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34020 MB
+#-----------------------------------------------------------
+source stop_watch_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/utils_1/imports/synth_1/stop_watch_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/utils_1/imports/synth_1/stop_watch_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top stop_watch_top -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15520
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1312.758 ; gain = 439.809
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'ST', assumed default net type 'wire' [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/stop_watch.v:55]
+INFO: [Synth 8-11241] undeclared symbol 'CL', assumed default net type 'wire' [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/stop_watch.v:67]
+WARNING: [Synth 8-11065] parameter 'TICK_MAX' becomes localparam in 'tick_gen' with formal parameter declaration list [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/tick_gen.v:27]
+INFO: [Synth 8-6157] synthesizing module 'stop_watch_top' [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/stop_watch_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'stop_watch' [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/stop_watch.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'stop_watch' (0#1) [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/stop_watch.v:23]
+INFO: [Synth 8-6157] synthesizing module 'disp_mod' [C:/Users/user/Documents/카카오톡 받은 파일/disp.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'disp_mod' (0#1) [C:/Users/user/Documents/카카오톡 받은 파일/disp.v:4]
+INFO: [Synth 8-6157] synthesizing module 'tick_gen' [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/tick_gen.v:23]
+	Parameter CLK_FREQ bound to: 125000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'tick_gen' (0#1) [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/tick_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'stop_watch_top' (0#1) [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/stop_watch_top.v:3]
+WARNING: [Synth 8-6014] Unused sequential element btn1_ff1_reg was removed.  [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/stop_watch.v:63]
+WARNING: [Synth 8-6014] Unused sequential element btn1_ff2_reg was removed.  [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/sources_1/new/stop_watch.v:64]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1420.285 ; gain = 547.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1420.285 ; gain = 547.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1420.285 ; gain = 547.336
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1420.285 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/constrs_1/new/stop_watch.xdc]
+Finished Parsing XDC File [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/constrs_1/new/stop_watch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.srcs/constrs_1/new/stop_watch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/stop_watch_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/stop_watch_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1434.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1434.309 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1434.309 ; gain = 561.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1434.309 ; gain = 561.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1434.309 ; gain = 561.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1434.309 ; gain = 561.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1434.309 ; gain = 561.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1434.309 ; gain = 561.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1434.309 ; gain = 561.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1440.828 ; gain = 567.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1440.828 ; gain = 567.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1440.828 ; gain = 567.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1440.828 ; gain = 567.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1440.828 ; gain = 567.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1440.828 ; gain = 567.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1440.828 ; gain = 567.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     6|
+|4     |LUT2   |     7|
+|5     |LUT3   |     5|
+|6     |LUT4   |     8|
+|7     |LUT5   |     8|
+|8     |LUT6   |    32|
+|9     |FDRE   |    61|
+|10    |IBUF   |     3|
+|11    |OBUF   |     8|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1440.828 ; gain = 567.879
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 1440.828 ; gain = 553.855
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1440.828 ; gain = 567.879
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1449.676 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1456.316 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 82822080
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 1456.316 ; gain = 976.082
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1456.316 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Verilog/practico_11_11_stopwatch/practico_11_11_stopwatch.runs/synth_1/stop_watch_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file stop_watch_top_utilization_synth.rpt -pb stop_watch_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 11 14:53:49 2024...

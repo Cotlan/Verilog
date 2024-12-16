@@ -1,0 +1,80 @@
+
+*** Running vivado
+    with args -log traffic_FSM.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source traffic_FSM.tcl -notrace
+
+
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source traffic_FSM.tcl -notrace
+Command: link_design -top traffic_FSM -part xc7z007sclg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 873.539 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 966.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 966.266 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+지정된 경로를 찾을 수 없습니다.
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z007s'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[0] has multiple drivers: COUNT_reg[0]/Q, COUNT_reg[0]__0/Q, COUNT_reg[0]__2/Q, and COUNT_reg[0]__1/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[10] has multiple drivers: COUNT_reg[10]/Q, COUNT_reg[10]__2/Q, COUNT_reg[10]__0/Q, and COUNT_reg[10]__1/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[11] has multiple drivers: COUNT_reg[11]/Q, COUNT_reg[11]__1/Q, COUNT_reg[11]__2/Q, and COUNT_reg[11]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[12] has multiple drivers: COUNT_reg[12]__1/Q, COUNT_reg[12]__0/Q, COUNT_reg[12]/Q, and COUNT_reg[12]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[13] has multiple drivers: COUNT_reg[13]__1/Q, COUNT_reg[13]__0/Q, COUNT_reg[13]__2/Q, and COUNT_reg[13]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[14] has multiple drivers: COUNT_reg[14]/Q, COUNT_reg[14]__0/Q, COUNT_reg[14]__1/Q, and COUNT_reg[14]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[15] has multiple drivers: COUNT_reg[15]/Q, COUNT_reg[15]__2/Q, COUNT_reg[15]__0/Q, and COUNT_reg[15]__1/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[16] has multiple drivers: COUNT_reg[16]/Q, COUNT_reg[16]__0/Q, COUNT_reg[16]__1/Q, and COUNT_reg[16]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[17] has multiple drivers: COUNT_reg[17]__0/Q, COUNT_reg[17]/Q, COUNT_reg[17]__1/Q, and COUNT_reg[17]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[18] has multiple drivers: COUNT_reg[18]__1/Q, COUNT_reg[18]__2/Q, COUNT_reg[18]/Q, and COUNT_reg[18]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[19] has multiple drivers: COUNT_reg[19]__0/Q, COUNT_reg[19]/Q, COUNT_reg[19]__1/Q, and COUNT_reg[19]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[1] has multiple drivers: COUNT_reg[1]/Q, COUNT_reg[1]__0/Q, COUNT_reg[1]__2/Q, and COUNT_reg[1]__1/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[20] has multiple drivers: COUNT_reg[20]/Q, COUNT_reg[20]__0/Q, COUNT_reg[20]__2/Q, and COUNT_reg[20]__1/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[21] has multiple drivers: COUNT_reg[21]/Q, COUNT_reg[21]__1/Q, COUNT_reg[21]__0/Q, and COUNT_reg[21]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[22] has multiple drivers: COUNT_reg[22]/Q, COUNT_reg[22]__0/Q, COUNT_reg[22]__1/Q, and COUNT_reg[22]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[23] has multiple drivers: COUNT_reg[23]/Q, COUNT_reg[23]__0/Q, COUNT_reg[23]__1/Q, and COUNT_reg[23]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[24] has multiple drivers: COUNT_reg[24]/Q, COUNT_reg[24]__0/Q, COUNT_reg[24]__2/Q, and COUNT_reg[24]__1/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[25] has multiple drivers: COUNT_reg[25]/Q, COUNT_reg[25]__0/Q, COUNT_reg[25]__2/Q, and COUNT_reg[25]__1/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[26] has multiple drivers: COUNT_reg[26]__0/Q, COUNT_reg[26]/Q, COUNT_reg[26]__1/Q, and COUNT_reg[26]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[27] has multiple drivers: COUNT_reg[27]/Q, COUNT_reg[27]__0/Q, COUNT_reg[27]__2/Q, and COUNT_reg[27]__1/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[2] has multiple drivers: COUNT_reg[2]__0/Q, COUNT_reg[2]__2/Q, COUNT_reg[2]/Q, and COUNT_reg[2]__1/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[3] has multiple drivers: COUNT_reg[3]__0/Q, COUNT_reg[3]__1/Q, COUNT_reg[3]__2/Q, and COUNT_reg[3]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[4] has multiple drivers: COUNT_reg[4]__0/Q, COUNT_reg[4]__1/Q, COUNT_reg[4]/Q, and COUNT_reg[4]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[5] has multiple drivers: COUNT_reg[5]__0/Q, COUNT_reg[5]__2/Q, COUNT_reg[5]__1/Q, and COUNT_reg[5]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[6] has multiple drivers: COUNT_reg[6]__1/Q, COUNT_reg[6]__2/Q, COUNT_reg[6]__0/Q, and COUNT_reg[6]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[7] has multiple drivers: COUNT_reg[7]/Q, COUNT_reg[7]__0/Q, COUNT_reg[7]__1/Q, and COUNT_reg[7]__2/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[8] has multiple drivers: COUNT_reg[8]__0/Q, COUNT_reg[8]__2/Q, COUNT_reg[8]__1/Q, and COUNT_reg[8]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT[9] has multiple drivers: COUNT_reg[9]/Q, COUNT_reg[9]__2/Q, COUNT_reg[9]__1/Q, and COUNT_reg[9]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net COUNT_DONE has multiple drivers: COUNT_DONE_reg__2/Q, COUNT_DONE_reg__0/Q, COUNT_DONE_reg/Q, and COUNT_DONE_reg__1/Q.
+INFO: [Project 1-461] DRC finished with 29 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.525 . Memory (MB): peak = 1021.910 ; gain = 26.750
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 0 Warnings, 0 Critical Warnings and 30 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  4 15:51:07 2024...

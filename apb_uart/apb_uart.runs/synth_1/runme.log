@@ -1,0 +1,257 @@
+
+*** Running vivado
+    with args -log apb_uart.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source apb_uart.tcl
+
+
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source apb_uart.tcl -notrace
+Command: synth_design -top apb_uart -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9784
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 922.469 ; gain = 441.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'apb_uart' [C:/Verilog/project_14/project_14.srcs/sources_1/new/apb_uart.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Verilog/project_14/project_14.srcs/sources_1/new/apb_uart.v:54]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Verilog/project_14/project_14.srcs/sources_1/new/apb_uart.v:105]
+INFO: [Synth 8-6155] done synthesizing module 'apb_uart' (0#1) [C:/Verilog/project_14/project_14.srcs/sources_1/new/apb_uart.v:1]
+WARNING: [Synth 8-3917] design apb_uart has port pready driven by constant 1
+WARNING: [Synth 8-3917] design apb_uart has port pslverr driven by constant 0
+WARNING: [Synth 8-7129] Port pwdata[31] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[30] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[29] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[28] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[27] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[26] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[25] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[24] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[23] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[22] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[21] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[20] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[19] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[18] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[17] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[16] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[15] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[14] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[13] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[12] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[11] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[10] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[9] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[8] in module apb_uart is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1030.332 ; gain = 549.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1030.332 ; gain = 549.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1030.332 ; gain = 549.816
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1030.332 ; gain = 549.816
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 8     
+	   5 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design apb_uart has port pready driven by constant 1
+WARNING: [Synth 8-3917] design apb_uart has port pslverr driven by constant 0
+WARNING: [Synth 8-7129] Port pwdata[31] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[30] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[29] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[28] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[27] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[26] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[25] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[24] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[23] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[22] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[21] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[20] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[19] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[18] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[17] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[16] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[15] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[14] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[13] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[12] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[11] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[10] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[9] in module apb_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pwdata[8] in module apb_uart is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     2|
+|3     |LUT2 |     7|
+|4     |LUT3 |    10|
+|5     |LUT4 |    15|
+|6     |LUT5 |     9|
+|7     |LUT6 |     8|
+|8     |FDCE |    58|
+|9     |FDPE |     1|
+|10    |IBUF |    18|
+|11    |OBUF |    35|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   164|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1219.738 ; gain = 739.223
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 53 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1219.738 ; gain = 739.223
+Synthesis Optimization Complete : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1219.738 ; gain = 739.223
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1226.523 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1323.613 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+지정된 경로를 찾을 수 없습니다.
+Synth Design complete | Checksum: 42367c31
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1323.613 ; gain = 847.039
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1323.613 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Verilog/project_14/project_14.runs/synth_1/apb_uart.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file apb_uart_utilization_synth.rpt -pb apb_uart_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 23 13:19:32 2024...

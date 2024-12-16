@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Nov  4 12:42:55 2024
+# Process ID: 22680
+# Current directory: C:/Verilog/FSM_security/FSM_security.runs/synth_1
+# Command line: vivado.exe -log FSM_Security.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FSM_Security.tcl
+# Log file: C:/Verilog/FSM_security/FSM_security.runs/synth_1/FSM_Security.vds
+# Journal file: C:/Verilog/FSM_security/FSM_security.runs/synth_1\vivado.jou
+# Running On: COMSYS01, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34020 MB
+#-----------------------------------------------------------
+source FSM_Security.tcl -notrace

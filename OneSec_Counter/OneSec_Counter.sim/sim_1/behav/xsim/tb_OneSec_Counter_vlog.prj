@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../OneSec_Counter.srcs/sources_1/new/OneSec_Counter.v" \
+"../../../../OneSec_Counter.srcs/sources_1/new/tb_OneSec_Counter.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

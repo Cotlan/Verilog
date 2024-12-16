@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../my_serdes.srcs/sources_1/new/my_serdes.v" \
+"../../../../my_serdes.srcs/sources_1/new/p2s.v" \
+"../../../../my_serdes.srcs/sources_1/new/s2p.v" \
+"../../../../my_serdes.srcs/sim_1/new/tb_my_serdes.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

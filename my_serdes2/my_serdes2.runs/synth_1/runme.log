@@ -1,0 +1,194 @@
+
+*** Running vivado
+    with args -log my_serdes_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source my_serdes_tb.tcl
+
+
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source my_serdes_tb.tcl -notrace
+Command: synth_design -top my_serdes_tb -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19324
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 923.707 ; gain = 444.766
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'my_serdes_tb' [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes_tb.v:23]
+WARNING: [Synth 8-6896] wait statement is inside initial block, initial block items will be ignored [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes_tb.v:46]
+INFO: [Synth 8-6157] synthesizing module 'P2S' [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'P2S' (0#1) [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes.v:22]
+INFO: [Synth 8-6157] synthesizing module 'S2P' [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'S2P' (0#1) [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes.v:50]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes_tb.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'my_serdes_tb' (0#1) [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes_tb.v:23]
+WARNING: [Synth 8-3848] Net sof_in in module/entity my_serdes_tb does not have driver. [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes_tb.v:26]
+WARNING: [Synth 8-3848] Net din in module/entity my_serdes_tb does not have driver. [C:/Users/user/Documents/카카오톡 받은 파일/my_serdes_tb.v:27]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1029.516 ; gain = 550.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1029.516 ; gain = 550.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1029.516 ; gain = 550.574
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1029.516 ; gain = 550.574
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.109 ; gain = 735.168
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.109 ; gain = 735.168
+Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.109 ; gain = 735.168
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1214.109 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1318.051 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+지정된 경로를 찾을 수 없습니다.
+Synth Design complete | Checksum: 867bd275
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1318.051 ; gain = 842.066
+[libprotobuf ERROR C:\w10\HEAD\src\ext\protobuf\build\lnx64\protobuf-3.7.1\src\google\protobuf\wire_format_lite.cc:611] String field 'HDMetricDBGroup.MetricMapEntry.value' contains invalid UTF-8 data when serializing a protocol buffer. Use the 'bytes' type if you intend to send raw bytes. 
+[libprotobuf ERROR C:\w10\HEAD\src\ext\protobuf\build\lnx64\protobuf-3.7.1\src\google\protobuf\wire_format_lite.cc:611] String field 'HDMetricDBGroup.MetricMapEntry.value' contains invalid UTF-8 data when serializing a protocol buffer. Use the 'bytes' type if you intend to send raw bytes. 
+INFO: [Common 17-1381] The checkpoint 'C:/Verilog/my_serdes2/my_serdes2.runs/synth_1/my_serdes_tb.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file my_serdes_tb_utilization_synth.rpt -pb my_serdes_tb_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 28 20:12:30 2024...
